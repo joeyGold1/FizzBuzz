@@ -1,10 +1,34 @@
-var maxNum = 256;
-for (let i =1;i<=maxNum;i++){
-    printFizzBuzz(i);
+
+  
+var maxNum:number;
+maxNum = getUserNumber();
+
+
+
+
+
+function getUserNumber(){
+    const readline = require('readline');
+
+    const rl = readline.createInterface({
+        input: process.stdin,
+        output: process.stdout
+    });
+
+    rl.question('Input max number: ', (answer:string) => {
+        maxNum = Number(answer);
+        for (let i =1;i<=maxNum;i++){
+            printFizzBuzz(i);
+        }
+        rl.close();
+      });
+    return maxNum;
 }
 
+
+
 function printFizzBuzz(i:number){
-    //Create an empty string that can have Fizz and/or Buzz appended to it (or be changed to a number).
+    //Create an empty string that can have Fizz and/or Buzz (or any other words) appended to it (or be changed to a number).
     let toPrint: string = "";
     if (i%3 == 0) {
         toPrint += "Fizz";
