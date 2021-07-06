@@ -1,5 +1,4 @@
-var maxNum : number; 
-maxNum = 100;
+var maxNum = 100;
 for (let i=1;i<=maxNum;i++){
     printFizzBuzz(i);
 }
