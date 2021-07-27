@@ -1,9 +1,3 @@
-var maxNum = 100;
-for (let i=1;i<=maxNum;i++){
-    printFizzBuzz(i);
-}
-
-  
 var maxNum:number;
 maxNum = getUserNumber();
 
